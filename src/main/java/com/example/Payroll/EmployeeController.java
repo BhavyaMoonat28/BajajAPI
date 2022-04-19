@@ -75,14 +75,14 @@ class EmployeeController {
 
     // Aggregate root
     // tag::get-aggregate-root[]
-    @GetMapping("/employees")
+    @GetMapping("/bfhl")
     List<Employee> all() {
         return repository.findAll();
     }
     // end::get-aggregate-root[]
 
     @PostMapping(
-        "/employees/bfhl"
+        "/bfhl"
     )
     String newEmployee(@RequestBody Input input) {
         System.out.println(input.getData());
